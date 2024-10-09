@@ -1,0 +1,25 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "INSERT INTO image_hashes (hash, guild_id, channel_id, message_id, timestamp)\n                 VALUES ($1, $2, $3, $4, NOW())\n                 RETURNING id",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Int8",
+        "Int8",
+        "Int8"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "86a85d6ce6081410d07ca62129e5510e3a9dc40a9ffe5968535bed90aaf51c5f"
+}
